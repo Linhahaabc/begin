@@ -1,8 +1,7 @@
 #include<stdio.h>
-
 int main()
 {
-	printf("太美丽了\n");
+	printf("有点意思啊\n");
 	return 0;
 }
-//快捷键ctrl+f5
+//快捷键；ctrl+f5
