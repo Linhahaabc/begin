@@ -1,14 +1,8 @@
-#include<stdio.h.>
+#include<stdio.h>
 
 int main()
 {
-    printf("hello world\n");
-
-    return 0;
+	printf("太美丽了\n");
+	return 0;
 }
-//快捷键：ctrl+f5
-//
-
-
-
-
+//快捷键ctrl+f5
