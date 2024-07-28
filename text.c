@@ -1,15 +1,21 @@
 #define  _CRT_SECURE_NO_WARNINGS 1
-//计算你年龄天数
+/*两个函数的运用*/
 #include<stdio.h>
+void jolly(void);
+void deny(void);
 int main(void)
 {
-	int year, month, day, allday;
-	year = 0;
-	month = 0;
-	day = 0;
-	allday = 0;
-	scanf("%d %d %d", &year, &month, &day);
-	allday = allday + year * 365 + month * 30 + day;
-	printf("年龄天数是%d\n", allday);
+	jolly();
+	jolly();
+	jolly();
+	deny();
 	return 0;
+}
+void jolly(void)
+{
+	printf("For he's a jolly good fellow!\n");
+}
+void deny(void)
+{
+	printf("Which nobody can deny\n");
 }
