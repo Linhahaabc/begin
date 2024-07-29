@@ -2,18 +2,8 @@
 #include<stdio.h>
 int main(void)
 {
-	float weight;
-	float value;
-	printf("Are you worth you weight in platinum\n");
-	printf("Let's check in out\n");
-	printf("Please enter you weight in pound:");
-	scanf("%f",&weight);
-	value = 1700 * weight * 14.5833;
-	printf("You weight in platinum is worth $%f\n",value);
-	printf("You are easliy worthn that,If platinum prices drop,\n");
-	printf("eat more to maintain you value\n");
-	return 0; 
-
-
-
+	int a = 100;
+	printf("a=%d,a=%o,a=%x\n", a, a, a);
+	printf("a=%d,a=%#o,a=%#x",a, a, a);
+	return 0;
 }
