@@ -1,21 +1,28 @@
 #define  _CRT_SECURE_NO_WARNINGS 1
-/*两个函数的运用*/
+/*多函数运用与同行函数的分行*/
 #include<stdio.h>
-void jolly(void);
-void deny(void);
+/*函数原型*/
+void br(void);
+void ic(void);
+/*内容*/
 int main(void)
 {
-	jolly();
-	jolly();
-	jolly();
-	deny();
+	br();
+	printf(",");
+	ic();
+	printf("\n");
+	ic();
+	printf("\n");
+	br();
 	return 0;
+	
 }
-void jolly(void)
+/*函数的定义*/
+void br(void)
 {
-	printf("For he's a jolly good fellow!\n");
+	printf("Brazil,Russia");
 }
-void deny(void)
+void ic(void)
 {
-	printf("Which nobody can deny\n");
+	printf("India,China");
 }
