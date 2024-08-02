@@ -1,12 +1,14 @@
 #define  _CRT_SECURE_NO_WARNINGS 1
 #include<stdio.h>
+/*使用转义程序*/
 int main(void)
 {
-	printf("Type int has a size of %zd bytes\n", sizeof(int));
-	printf("Type char has a size of %zd bytes\n", sizeof(char));
-	printf("Type long has a size of %zd bytes\n", sizeof(long));
-	printf("Type long long has a size of %zd bytes\n", sizeof(long long));
-	printf("Type double has a size of %zd bytes\n", sizeof(double));
-	printf("Type long double has a size of %zd bytes\n", sizeof(long double));
+	float salary;
+	printf("\aEnter your desired monthly salary:");
+	printf("$____\b\b\b\b");
+	scanf("%f", &salary);
+	printf("\n\t$%.2f a month is $%.2f a year,", salary,salary*12.00);
+	printf("\rGee\n");
 	return 0;
+
 }
