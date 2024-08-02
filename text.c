@@ -1,13 +1,14 @@
 #define  _CRT_SECURE_NO_WARNINGS 1
 #include<stdio.h>
-/*浮点的不同转换*/
+/*年龄转化为秒数*/
 int main(void)
 {
-	float a=6.425e+01;
-	
-	printf("Enter a floating - point value :%.2f\n",a);
-	printf("fixed-point notition:%f\n,", a);
-	printf("exponential notional:%e\n", a);
-	printf("p notition:%ex\n", a);
+	int a;
+	printf("请输入你的年龄:");
+	printf("________\b\b\b\b\b\b\b\b");
+	scanf("%d",&a);
+	printf("你的年龄一共有%lld秒", a * 31560000);
 	return 0;
+	
+
 }
