@@ -1,14 +1,13 @@
 #define  _CRT_SECURE_NO_WARNINGS 1
 #include<stdio.h>
-/*使用转义程序*/
+/*浮点的不同转换*/
 int main(void)
 {
-	float salary;
-	printf("\aEnter your desired monthly salary:");
-	printf("$____\b\b\b\b");
-	scanf("%f", &salary);
-	printf("\n\t$%.2f a month is $%.2f a year,", salary,salary*12.00);
-	printf("\rGee\n");
+	float a=6.425e+01;
+	
+	printf("Enter a floating - point value :%.2f\n",a);
+	printf("fixed-point notition:%f\n,", a);
+	printf("exponential notional:%e\n", a);
+	printf("p notition:%ex\n", a);
 	return 0;
-
 }
