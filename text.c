@@ -1,13 +1,11 @@
 #define  _CRT_SECURE_NO_WARNINGS 1
 #include<stdio.h>
-#define a 959.355555
-/*×Ö·û¿í¶È*/
 int main(void)
 {
-	printf("*%f*\n", a);
-	printf("*%2f*\n", a);
-	printf("*%20f*\n", a);
-	printf("*%-20f*\n", a);
-	printf("*%7.2f*\n", a);
-	printf("*%-7.2f*\n", a);
+	const int b = 6;
+	printf("%x %#x\n", 42, 42);
+	printf("*%d**% d**% d**\n", 42,42, -42);
+	printf("**%5d**%.3d**%5.3d**%05.3d\n", b, b, b, b);
+	return 0;
+
 }
