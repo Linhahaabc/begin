@@ -1,16 +1,14 @@
 #define  _CRT_SECURE_NO_WARNINGS 1
 #include<stdio.h>
+/*printf中不同的换行方法*/
 int main(void)
 {
-	char NAME[40]="哈哈哈哈";
-	int WAGE=200000;
-	printf("请输入你的名字\n");
-	
-	printf("请输入你们家庭的收入\n ");
-
-	printf("The %s family just may be %d dollers richer!\n", NAME, WAGE);
+	printf("Here's a one way to");
+	printf("print a long string\n");
+	printf("Here's another way to\
+ print a long string\n");
+	printf("Here's the newest way to"
+		"print a long string");
 	return 0;
 
-
-	
 }
