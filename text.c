@@ -1,12 +1,16 @@
 #define  _CRT_SECURE_NO_WARNINGS 1
 #include<stdio.h>
-#define a "Hello world!"
-/*字符串的转换*/
 int main(void)
 {
-	printf("%2s\n", a);
-	printf("%20s\n", a);
-	printf("%20.3s\n", a);
-	printf("%-20s\n", a);
+	char NAME[40]="哈哈哈哈";
+	int WAGE=200000;
+	printf("请输入你的名字\n");
+	
+	printf("请输入你们家庭的收入\n ");
+
+	printf("The %s family just may be %d dollers richer!\n", NAME, WAGE);
 	return 0;
+
+
+	
 }
