@@ -1,11 +1,13 @@
 #define  _CRT_SECURE_NO_WARNINGS 1
 #include<stdio.h>
-/*scanf中*的运用*/
+/*不同长度数字宽度一致*/
 int main(void)
 {
-	int a;
-	printf("Please enter these integer:\n");
-	scanf("%*d %*d %d", &a);
-	printf("The last integer was %d", a);
+	printf("%9d %9d %9d\n", 30, 70, 60);
+	printf("%9d %9d %9d\n", 30000, 70000, 60000);
+	printf("%9d %9d %9d\n", 305165, 7013, 60653);
+	printf("%-9d %-9d %-9d\n", 30, 70, 60);
+	printf("%-9d %-9d %-9d\n", 30000, 70000, 60000);
+	printf("%-9d %-9d %-9d\n", 30153, 7025, 60566);
 	return 0;
 }
