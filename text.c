@@ -2,12 +2,15 @@
 #include<stdio.h>
 int main(void)
 {
-	int age;
-	float assets;
-	char pet[30];
-	printf("Enter your age,assets,and your fovorite pet.\n");
-	scanf("%d %f", &age, &assets);
-	scanf("%s", pet);
-	printf("%d $%.2f %s\n ",age, assets, pet);
+	unsigned width, precision;
+	int nummer=0;
+	double weight=0;
+	printf("Enter a filed width:\n");
+	scanf("%d",&width);
+	printf("The nummer is :%-*d:\n", width, nummer);
+	scanf("%d %d",&width,&precision);
+	printf("Weight=%*.*f\n", width, precision, weight);
+	printf("Done!");
 	return 0;
+
 }
