@@ -2,10 +2,13 @@
 #include<stdio.h>
 int main(void)
 {
-	char NAME[20],SURNAME[20];
-	
-	printf("请输入你的名和姓\n");
-	scanf("%s %s", NAME, SURNAME);
-	printf("%s,%s\n", NAME, SURNAME);
+	char NAME[10], SURNAME[10];
+	float height;
+	printf("Please enter your suiname and your name.\n");
+	scanf("%s %s", SURNAME,NAME);
+	printf("Please enter your height(cm).\n");
+	scanf("%f",&height);
+	printf("%s%s,you are %.2f meter tall", SURNAME, NAME, height/100);
 	return 0;
+	
 }
