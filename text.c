@@ -1,13 +1,11 @@
 #define  _CRT_SECURE_NO_WARNINGS 1
 #include<stdio.h>
-/*不同长度数字宽度一致*/
+#define BOOK "War and Peace"
 int main(void)
 {
-	printf("%9d %9d %9d\n", 30, 70, 60);
-	printf("%9d %9d %9d\n", 30000, 70000, 60000);
-	printf("%9d %9d %9d\n", 305165, 7013, 60653);
-	printf("%-9d %-9d %-9d\n", 30, 70, 60);
-	printf("%-9d %-9d %-9d\n", 30000, 70000, 60000);
-	printf("%-9d %-9d %-9d\n", 30153, 7025, 60566);
+	float cost = 12.99;
+	float percent = 80.0;
+	printf("This copy of \"%s\" sells for %.2f.\n", BOOK, cost);
+	printf("That is %.f%% of list.", percent);
 	return 0;
 }
