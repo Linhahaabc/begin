@@ -1,20 +1,26 @@
 #define  _CRT_SECURE_NO_WARNINGS 1
 #include<stdio.h>
-#define ADJUST 7.31
+/*计算皇帝棋局放米粒的问题*/
 int main(void)
 {
-	const double SCALE = 0.333;
-	double shoe, foot;
-	
-	printf("Shoes size(men's)    foot length\n");
-	shoe = 3.0;
-	while (shoe < 18.5)
+	printf("square      grains         total       fraction of\n");
+	printf("            added          grains      world total\n");
+	int line;
+	double every, added, totalgrains, totalworld;
+	every = 1;
+	line = 1;
+	added = 1;
+	totalgrains = 1;
+	totalworld = 2e16;
+	while (line < 65)
 	{
-		foot = SCALE * shoe + ADJUST;
-		printf("%10.1f %15.2f inches\n", shoe, foot);
-		shoe = shoe + 1.0;
+		printf("%6.2d      %6.2e     %6.2e      %11.2e\n", line, added, totalgrains, totalworld);
+		line = line + 1;
+		added = added * 2;
+		totalgrains = totalgrains + added;
+		
 	}
-	printf("If the shoes fits,wear it.\n");
 	return 0;
-
 }
+
+
