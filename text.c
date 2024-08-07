@@ -1,26 +1,21 @@
 #define  _CRT_SECURE_NO_WARNINGS 1
 #include<stdio.h>
-/*计算皇帝棋局放米粒的问题*/
+#define SEC_PER_MIN 60
 int main(void)
 {
-	printf("square      grains         total       fraction of\n");
-	printf("            added          grains      world total\n");
-	int line;
-	double every, added, totalgrains, totalworld;
-	every = 1;
-	line = 1;
-	added = 1;
-	totalgrains = 1;
-	totalworld = 2e16;
-	while (line < 65)
+	int sec, min, left;
+	printf("Convert seconds to minutes and seconds!\n");
+	printf("Enter the number of seconds (<=0 to quir):\n");
+	scanf("%d", &sec);
+	while (sec >0)
 	{
-		printf("%6.2d      %6.2e     %6.2e      %11.2e\n", line, added, totalgrains, totalworld);
-		line = line + 1;
-		added = added * 2;
-		totalgrains = totalgrains + added;
-		
+		min = sec / SEC_PER_MIN;
+		left = sec % SEC_PER_MIN;
+		printf("%d seconds is %d minutes,%d seconds.\n", sec, min, left);
+		printf("Enter next value(<=0 to quit):\n");
+		scanf("%d", &sec);
 	}
+	printf("Done!\n");
 	return 0;
 }
-
 
