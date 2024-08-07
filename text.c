@@ -1,24 +1,20 @@
 #define  _CRT_SECURE_NO_WARNINGS 1
 #include<stdio.h>
-/*复合函数的用法*/
-void haha(int n);
+#define change 60
+/*分钟数转换为秒数与小时数*/
 int main(void)
 {
-	int a = 6;
-	char b = '?';
-	float c = 6.33;
-
-	haha(a);
-	haha(b);
-	haha(c);
-	return 0;
-}
-void haha(int n)
-{
-	while (n-- > 0)
+	int minutes,seconds;
+	double hours;
+	printf("Please enter a number(minutes)\n");
+	scanf("%d", &minutes);
+	while (minutes > 0)
 	{
-		printf("#");
+		seconds = minutes * change;
+		hours = minutes / change;
+		printf("%d minutes is %d seconds or %.4f hours\n", minutes, seconds, hours);
+		printf("Please enter a number(minutes)\n");
+		scanf("%d", &minutes);
 	}
-	printf("\n");
-	
+	return 0;
 }
