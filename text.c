@@ -1,21 +1,24 @@
 #define  _CRT_SECURE_NO_WARNINGS 1
 #include<stdio.h>
-#define SEC_PER_MIN 60
+/*复合函数的用法*/
+void haha(int n);
 int main(void)
 {
-	int sec, min, left;
-	printf("Convert seconds to minutes and seconds!\n");
-	printf("Enter the number of seconds (<=0 to quir):\n");
-	scanf("%d", &sec);
-	while (sec >0)
-	{
-		min = sec / SEC_PER_MIN;
-		left = sec % SEC_PER_MIN;
-		printf("%d seconds is %d minutes,%d seconds.\n", sec, min, left);
-		printf("Enter next value(<=0 to quit):\n");
-		scanf("%d", &sec);
-	}
-	printf("Done!\n");
+	int a = 6;
+	char b = '?';
+	float c = 6.33;
+
+	haha(a);
+	haha(b);
+	haha(c);
 	return 0;
 }
-
+void haha(int n)
+{
+	while (n-- > 0)
+	{
+		printf("#");
+	}
+	printf("\n");
+	
+}
