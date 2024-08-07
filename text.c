@@ -1,14 +1,20 @@
 #define  _CRT_SECURE_NO_WARNINGS 1
 #include<stdio.h>
+#define ADJUST 7.31
 int main(void)
 {
-	char NAME[10], SURNAME[10];
-	float height;
-	printf("Please enter your suiname and your name.\n");
-	scanf("%s %s", SURNAME,NAME);
-	printf("Please enter your height(cm).\n");
-	scanf("%f",&height);
-	printf("%s%s,you are %.2f meter tall", SURNAME, NAME, height/100);
-	return 0;
+	const double SCALE = 0.333;
+	double shoe, foot;
 	
+	printf("Shoes size(men's)    foot length\n");
+	shoe = 3.0;
+	while (shoe < 18.5)
+	{
+		foot = SCALE * shoe + ADJUST;
+		printf("%10.1f %15.2f inches\n", shoe, foot);
+		shoe = shoe + 1.0;
+	}
+	printf("If the shoes fits,wear it.\n");
+	return 0;
+
 }
