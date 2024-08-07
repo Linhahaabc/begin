@@ -1,14 +1,14 @@
 #define  _CRT_SECURE_NO_WARNINGS 1
 #include<stdio.h>
-#include<string.h>
 int main(void)
 {
-	char name[10], surname[10];
-	printf("Please enter your surname and name\n");
-	scanf("%s ",surname);
-	scanf("%s", name);
-    printf("%*s %*s\n", strlen(surname),surname, strlen(name),name);
-	printf("%*zd %*zd\n", strlen(surname), strlen(surname), strlen(name), strlen(name));
-	
+	char NAME[10], SURNAME[10];
+	float height;
+	printf("Please enter your suiname and your name.\n");
+	scanf("%s %s", SURNAME,NAME);
+	printf("Please enter your height(cm).\n");
+	scanf("%f",&height);
+	printf("%s%s,you are %.2f meter tall", SURNAME, NAME, height/100);
 	return 0;
+	
 }
