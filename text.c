@@ -2,20 +2,21 @@
 #include<stdio.h>
 int main(void)
 {
-	long num ;
-	long sum = 0L;
-	_Bool input_is_good;
-	printf("Please enter an intger to be summed");
-	printf("(q to quit):");
-	input_is_good = (scanf("%ld", &num) == 1);
-	while (input_is_good )
-	{ 
-		sum = sum + num;
-		printf("Please enter an integer to be summed(q to quit£©");
-		input_is_good = (scanf("%ld", &num) == 1);
+	int line,cubic,max_line;
+	max_line = 10;
+
+	printf(" line  num cubic\n");
+	for (line = 1; line <= max_line; line++)
+	{
+		
+		
+		cubic = line * line* line;
+		printf("%5d %5d %5d\n", line,line,cubic);
+
 	}
-	printf("%ld", sum);
+	printf("Done!");
 	return 0;
 
 
 }
+
