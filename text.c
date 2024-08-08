@@ -1,20 +1,18 @@
 #define  _CRT_SECURE_NO_WARNINGS 1
 #include<stdio.h>
-double cubic(double n);
-int main(int argc, char *argv[])
+/*无法计算出立方，原因不明*/
+int cubic(double n);
+int main(void)
 {
-	double input;
-	printf("Enter the double detum to calc cubic:");
-	scanf("%1f" ,&input);
-	cubic((double)input);
-	printf("PROGRAM EXIT!\n");
+	double c;
+	scanf("%f",&c);
+	cubic((double)c);
 	return 0;
 }
-double cubic(double n)
+int cubic(double n)
 {
-	double t = (double)n *(double) n *(double) n;
-	printf("The %1g's cubic is %1g!\n");
-	return (double)t;
+	double d;
+	d = n * n * n;
+	printf("%.2f", d);
+	return 0;
 }
-/*无法找到bug*/
-
