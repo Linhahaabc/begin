@@ -1,20 +1,21 @@
 #define  _CRT_SECURE_NO_WARNINGS 1
 #include<stdio.h>
-/*整数的平方求解*/
-int cubic(int n);
 int main(void)
 {
-	int num;
-	printf("Enter a number:");
-	scanf("%d", &num);
-	cubic(num);
+	long num ;
+	long sum = 0L;
+	_Bool input_is_good;
+	printf("Please enter an intger to be summed");
+	printf("(q to quit):");
+	input_is_good = (scanf("%ld", &num) == 1);
+	while (input_is_good )
+	{ 
+		sum = sum + num;
+		printf("Please enter an integer to be summed(q to quit）");
+		input_is_good = (scanf("%ld", &num) == 1);
+	}
+	printf("%ld", sum);
 	return 0;
-}
-int cubic(int n)
-{
-	long int cubics;
-	cubics = n* n * n;
-	printf("%d's cubic is %ld", n, cubics);
-	return 0;
+
 
 }
