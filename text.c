@@ -1,18 +1,20 @@
 #define  _CRT_SECURE_NO_WARNINGS 1
 #include<stdio.h>
-/*无法计算出立方，原因不明*/
-int cubic(double n);
+/*整数的平方求解*/
+int cubic(int n);
 int main(void)
 {
-	double c;
-	scanf("%f",&c);
-	cubic((double)c);
+	int num;
+	printf("Enter a number:");
+	scanf("%d", &num);
+	cubic(num);
 	return 0;
 }
-int cubic(double n)
+int cubic(int n)
 {
-	double d;
-	d = n * n * n;
-	printf("%.2f", d);
+	long int cubics;
+	cubics = n* n * n;
+	printf("%d's cubic is %ld", n, cubics);
 	return 0;
+
 }
