@@ -1,19 +1,18 @@
 #define  _CRT_SECURE_NO_WARNINGS 1
-#define FORCE 1
 #include<stdio.h>
+/*每天增加1的平方，计算输入天数后的总数*/
 int main(void)
 {
-	int first, second;
-	scanf("%d", &second);
-	scanf("%d", &first);
-	while (first > 0)
+	int day, days, sum;
+	sum = 0;
+	printf("enter a number.\n");
+	scanf("%d", &day);
+	days = day + 1;
+	while (--days > 0)
 	{
-		printf("%d %% %d is %d\n", first, second, first % second);
-		scanf("%d",&first);
-
-
+		sum = sum + days*days;
 	}
-	printf("done!\n");
+	printf("The sum is %d\n", sum);
+	printf("Done!");
 	return 0;
 }
-
