@@ -1,20 +1,17 @@
 #define  _CRT_SECURE_NO_WARNINGS 1
 #include<stdio.h>
-#define change 60
-/*分钟数转换为秒数与小时数*/
+/*输入一个数字，打印之后10个数字*/
 int main(void)
 {
-	int minutes,seconds;
-	double hours;
-	printf("Please enter a number(minutes)\n");
-	scanf("%d", &minutes);
-	while (minutes > 0)
+	int num1,num2,num3;
+	printf("Please enter a number\n");
+	scanf("%d", &num1);
+	num2 = num1 - 1;
+	num3 = num1 + 10;
+	while (num2++ < num3)
 	{
-		seconds = minutes * change;
-		hours = minutes / change;
-		printf("%d minutes is %d seconds or %.4f hours\n", minutes, seconds, hours);
-		printf("Please enter a number(minutes)\n");
-		scanf("%d", &minutes);
+		printf("%d\n", num2);
 	}
+		
 	return 0;
 }
