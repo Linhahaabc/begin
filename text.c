@@ -1,18 +1,20 @@
 #define  _CRT_SECURE_NO_WARNINGS 1
 #include<stdio.h>
-/*每天增加1的平方，计算输入天数后的总数*/
-int main(void)
+double cubic(double n);
+int main(int argc, char *argv[])
 {
-	int day, days, sum;
-	sum = 0;
-	printf("enter a number.\n");
-	scanf("%d", &day);
-	days = day + 1;
-	while (--days > 0)
-	{
-		sum = sum + days*days;
-	}
-	printf("The sum is %d\n", sum);
-	printf("Done!");
+	double input;
+	printf("Enter the double detum to calc cubic:");
+	scanf("%1f" ,&input);
+	cubic((double)input);
+	printf("PROGRAM EXIT!\n");
 	return 0;
 }
+double cubic(double n)
+{
+	double t = (double)n *(double) n *(double) n;
+	printf("The %1g's cubic is %1g!\n");
+	return (double)t;
+}
+/*无法找到bug*/
+
