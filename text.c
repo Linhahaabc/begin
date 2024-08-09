@@ -1,17 +1,19 @@
 #define  _CRT_SECURE_NO_WARNINGS 1
 #include<stdio.h>
+#define row 10
+#define line 10
 int main(void)
 {
-	double times, terms;
-	double added = 1;
-	printf("times   terms\n");
-	
-	for (times = 1, terms = 1; times <= 2.0; terms++)
+	char lines;
+	int rows;
+	for (rows  = 1; rows <= row; rows++)
 	{
-		printf("%.9f     %.0f\n", times, terms);
-		added /= 2;
-		times = times + added;
+		for (lines='A'; lines <= ('D'+line); lines++)
+			printf("%c", lines);
+		printf("\n");
 		
 	}
-    return 0;
+	return 0;
+	
+
 }
