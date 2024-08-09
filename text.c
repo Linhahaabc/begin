@@ -2,14 +2,16 @@
 #include<stdio.h>
 int main(void)
 {
-	const int FLRST_OZ = 46;
-	const int NEXT_OZ = 20;
-	int ounces, cost;
-
-	printf("   onces  cost\n");
-	for (ounces = 1, cost = FLRST_OZ; ounces <= 16; ounces++, cost += NEXT_OZ)
+	double times, terms;
+	double added = 1;
+	printf("times   terms\n");
+	
+	for (times = 1, terms = 1; times <= 2.0; terms++)
 	{
-		printf("%5d    $%4.2f\n", ounces, cost / 100.0);
+		printf("%.9f     %.0f\n", times, terms);
+		added /= 2;
+		times = times + added;
+		
 	}
-	return 0;
+    return 0;
 }
