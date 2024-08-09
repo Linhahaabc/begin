@@ -1,19 +1,18 @@
 #define  _CRT_SECURE_NO_WARNINGS 1
 #include<stdio.h>
-#define row 10
-#define line 10
 int main(void)
 {
-	char lines;
-	int rows;
-	for (rows  = 1; rows <= row; rows++)
+	const int row=10;
+	const int line=10;
+	int rows, lines;
+	for (rows = 0; rows <= row; rows++)
 	{
-		for (lines='A'; lines <= ('D'+line); lines++)
-			printf("%c", lines);
-		printf("\n");
+		for (lines = 'A'; lines <= ('A' + row-rows); lines++)
 		
+			printf("%c", lines);
+			
+			printf("\n");
 	}
-	return 0;
-	
 
+	return 0;
 }
