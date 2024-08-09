@@ -2,13 +2,9 @@
 #include<stdio.h>
 int main(void)
 {
-	int n, x;
-	printf("Enter a intger:");
-	scanf("%d",&n);
-	for (x = 4; n <= 100000000; n = x * n);
-	printf("%d", n);
-	return 0;
-	
+	int n=0;
 
-	
+	for (printf("keep enter a number\n"); n != 8; scanf("%d", &n));
+	printf("Good!");
+	return 0;
 }
