@@ -2,9 +2,14 @@
 #include<stdio.h>
 int main(void)
 {
-	int n=0;
+	const int FLRST_OZ = 46;
+	const int NEXT_OZ = 20;
+	int ounces, cost;
 
-	for (printf("keep enter a number\n"); n != 8; scanf("%d", &n));
-	printf("Good!");
+	printf("   onces  cost\n");
+	for (ounces = 1, cost = FLRST_OZ; ounces <= 16; ounces++, cost += NEXT_OZ)
+	{
+		printf("%5d    $%4.2f\n", ounces, cost / 100.0);
+	}
 	return 0;
 }
