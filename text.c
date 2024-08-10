@@ -1,18 +1,27 @@
 #define  _CRT_SECURE_NO_WARNINGS 1
 #include<stdio.h>
+/*指数的计算*/
+long long pow(int number,int index);
 int main(void)
 {
-	const int row = 10;
-	const int line = 10;
-	int rows, lines;
-	for (rows = 0; rows <= row; rows++)
+	int number, index;
+	printf("Please enter intgers and index:");
+	while (scanf("%d %d", &number, &index) == 2)
 	{
-		for (lines = ('A'+rows); lines <= ('A' + row); lines++)
-
-			printf("%c", lines);
-
-		printf("\n");
+		pow(number, index);
+		scanf("%d %d", &number, &index);
 	}
-
 	return 0;
+
 }
+long long pow(int number, int index)
+{
+	long long result,num;
+	for (num = 1, result = 1; num <= index; num++)
+		result = result * number;
+	printf("the result is %ld", result);
+	return result;
+
+}
+
+
