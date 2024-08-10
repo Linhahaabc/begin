@@ -1,15 +1,16 @@
 #define  _CRT_SECURE_NO_WARNINGS 1
 #include<stdio.h>
-#define ROW 10
-#define LINE 10
 int main(void)
 {
-	int row, line;
-	for (line = 1; line <= LINE; line++)
+	int line,real_line,real_row;
+	printf("Please enter a intger:");
+	scanf("%d", &line);
+	for (real_line = 1; real_line <= line; real_line++)
 	{
-		for (row = 1; row <= ROW; row++)
+		for (real_row = real_line; real_row >= 1; real_row--)
 			printf("$");
 		printf("\n");
 	}
 	return 0;
+	
 }
