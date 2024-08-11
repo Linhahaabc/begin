@@ -1,27 +1,26 @@
 #define  _CRT_SECURE_NO_WARNINGS 1
 #include<stdio.h>
+#include<string.h>
 int main(void)
 {
-	int num,max, min;
-	long square,cubic;
-	printf("Please enter a number as the minimum value:");
-	scanf("%d",&min);
-	printf("\n");
-	printf("Please enter a number as the maximun value:");
-	scanf("%d",&max);
-	printf("number     square    cubic\n");
-
+	int max, min;
+	long num,squ,sum;
+	printf("Please enter a number as the minimin and maximun value:");
+	scanf("%d %d", &min,&max);
 	
-	
-	for (num=min; num <= max; num++)
+	while (min <= max)
 	{
-		square = num * num;
-		cubic = num * num * num;
-		printf("%6d %10ld %8ld\n", num, square, cubic);
-	}
-	
-	printf("Done!\n");
+		for (num = min,sum=0; num <= max; num++)
+		{
+			squ = num * num;
+			sum += squ;
+		}
+		printf("the sum is %ld\n", sum);
+		printf("Please enter a number as the minimin and maximun value:");
+		scanf("%d %d", &min, &max);
 
+	}
+	printf("Done!");
 	return 0;
-	
+
 }
