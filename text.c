@@ -2,17 +2,13 @@
 #include<stdio.h>
 int main(void)
 {
-	double sum1, sum2;
-	sum1 = sum2 =100.0;
-	int year = 1;
-	while (sum1 >= sum2)
+	double  wage = 1.0e6;
+	int year;
+	for (year = 1; wage >= 0; year++)
 	{
-		sum1 += 100.0 * 0.1;
-		sum2 += sum2 * 0.05;
-		year++;
-		printf("%f   %f\n", sum1, sum2);
+		wage *= 1.08;
+		wage = wage - 1.0e5;
 	}
-	printf("%d years later,%0.2f   %0.2f", year, sum1, sum2);
-	
+	printf("%d years later,the wage will be used up",year);
 	return 0;
 }
