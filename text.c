@@ -2,23 +2,26 @@
 #include<stdio.h>
 int main(void)
 {
-	char input,control,first,middle;
-	int line,blank,real_line;
-	printf("Please enter a letter:");
-	scanf("%c", &input);
-	for (line = (int)input, control = 'A',real_line=1; (char)control <=(char) input; control++,real_line++)
-	{
-		for (blank = 1; blank <= line - 1; blank++)
-		{
-			printf("%c",' ');
-			for (first = 'A'; (int)first <= ((int)'A' + real_line); first++)
-			{
-				printf("%c", first);
-				for (middle = first - 1; (int)middle >= (int)'A'; middle--)
-					printf("%c", middle);
-			}
-		}
-		printf("\n");
+	int num,max, min;
+	long square,cubic;
+	printf("Please enter a number as the minimum value:");
+	scanf("%d",&min);
+	printf("\n");
+	printf("Please enter a number as the maximun value:");
+	scanf("%d",&max);
+	printf("number     square    cubic\n");
 
+	
+	
+	for (num=min; num <= max; num++)
+	{
+		square = num * num;
+		cubic = num * num * num;
+		printf("%6d %10ld %8ld\n", num, square, cubic);
 	}
+	
+	printf("Done!\n");
+
+	return 0;
+	
 }
