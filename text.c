@@ -2,13 +2,15 @@
 #include<stdio.h>
 int main(void)
 {
-	double  wage = 1.0e6;
-	int year;
-	for (year = 1; wage >= 0; year++)
+	int friend = 5;
+	int week,add_friend;
+	printf("week  added friend    total friend \n");
+	for (week = 1; friend <= 150; week++)
 	{
-		wage *= 1.08;
-		wage = wage - 1.0e5;
+		add_friend = friend - 1;
+		friend =friend-1+ add_friend;
+		printf("%4d %13d %15d\n", week, add_friend,friend);
 	}
-	printf("%d years later,the wage will be used up",year);
+	printf("Done!");
 	return 0;
-}
+}	
