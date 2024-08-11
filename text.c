@@ -1,26 +1,21 @@
 #define  _CRT_SECURE_NO_WARNINGS 1
 #include<stdio.h>
-#include<string.h>
 int main(void)
 {
-	int max, min;
-	long num,squ,sum;
-	printf("Please enter a number as the minimin and maximun value:");
-	scanf("%d %d", &min,&max);
-	
-	while (min <= max)
-	{
-		for (num = min,sum=0; num <= max; num++)
-		{
-			squ = num * num;
-			sum += squ;
-		}
-		printf("the sum is %ld\n", sum);
-		printf("Please enter a number as the minimin and maximun value:");
-		scanf("%d %d", &min, &max);
-
-	}
-	printf("Done!");
+	int input[8], output[8];
+	int order;
+	printf("Please enter eight number:\n");
+	for (order = 0; order <= 7; order++)
+		scanf("%d", &input[order]);
+	for (order = 0; order <= 7; order++)
+		output[7 - order] = input[order];
+	for (order = 0; order <= 7; order++)
+		printf("%d ", output[order]);
+	printf("\nDone!\n");
 	return 0;
+
+	
+
+	
 
 }
