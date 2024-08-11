@@ -2,15 +2,17 @@
 #include<stdio.h>
 int main(void)
 {
-	char input[250];
-	int order,num,length;
-	printf("Please enter the letter(<=256):");
-	order = 0;
-	do {
-		scanf("%c", &input[order]);
-		
-	} while (input[order] != '\n' && ++order);/*&& ++order ¼ÆËã¹ı³Ì*/
-	for (order--; order >= 0; order--)
-		printf("%c", input[order]);
+	double sum1, sum2;
+	sum1 = sum2 =100.0;
+	int year = 1;
+	while (sum1 >= sum2)
+	{
+		sum1 += 100.0 * 0.1;
+		sum2 += sum2 * 0.05;
+		year++;
+		printf("%f   %f\n", sum1, sum2);
+	}
+	printf("%d years later,%0.2f   %0.2f", year, sum1, sum2);
+	
 	return 0;
 }
