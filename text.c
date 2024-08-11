@@ -1,22 +1,19 @@
 #define  _CRT_SECURE_NO_WARNINGS 1
 #include<stdio.h>
-#include<math.h>
 int main(void)
 {
-	int long cycle_index;
-	double number,common,sum1,sum2;
-	int num = 1;
-	printf("Please enter a number as the cycle index:");
-	scanf("%ld", &cycle_index);
-	printf("cycle_index             sum1            sum2\n");
-	for (number = 1.0, common = 1.0,sum1=0,sum2=0; number <= cycle_index; number++)
+	int group[8], order, number;
+	int input = 2;
+	for (order = 0, number = 1; order < 8;order++)
 	{
-		
-		sum1 += common / number;
-		sum2 += common / number * pow(-1,number-1);
-		printf("%11ld  %15f %15f\n",num , sum1, sum2);
-		num++;
+		number *= 2;
+		group[order] = number;
 	}
-	printf("Done!\n");
+	order = 0;
+	do {
+		printf("%d ", group[order]);
+		order++;
+	} while (order < 8);
 	return 0;
+
 }
