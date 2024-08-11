@@ -1,16 +1,18 @@
 #define  _CRT_SECURE_NO_WARNINGS 1
 #include<stdio.h>
+#include<string.h>
 int main(void)
 {
-	int friend = 5;
-	int week,add_friend;
-	printf("week  added friend    total friend \n");
-	for (week = 1; friend <= 150; week++)
-	{
-		add_friend = friend - 1;
-		friend =friend-1+ add_friend;
-		printf("%4d %13d %15d\n", week, add_friend,friend);
-	}
+	char input[30];
+	int length;
+	printf("please enter the letter:");
+	scanf("%s",&input);
+	length = strlen(input) - 1;
+	for (; length >= 0; length--)
+		printf("%c", input[length]);
+	printf("\n");
 	printf("Done!");
 	return 0;
-}	
+	
+
+}
