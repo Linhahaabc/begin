@@ -1,37 +1,38 @@
 #define  _CRT_SECURE_NO_WARNINGS 1
 #include<stdio.h>
-#include<stdbool.h>
 int main(void)
 {
-	long long input,divide1,divide2;
-	bool isPrime;
-	printf("Please enter a number:");
-	
-	while (scanf("%lld", &input)==1)
-	{
-		for (divide1 = 2,isPrime=true; divide1 * divide1 <= input; divide1++)
-		{
-			if((input%divide1)==0)
-			{
-				if (divide1 * divide1 != input)
-				{
-					divide2 = input / divide1;
-					printf("%lld is divisiable by %lld and %lld\n", input, divide1, divide2);
-				}
-				else
-					printf("%lld is divisiable by %lld \n", input, divide1);
+	long input;
+	long num1, num2;
+	int judge = 1;
 
-				isPrime = false;
+	printf("Please enter a number:");
+	while (scanf("%ld", &input) == 1)
+	{
+
+		for (num1 = 2; (num1 * num1) <= input; num1++)
+		{
+			if ((input % num1) == 0)
+			{
+				if (num1 * num1 == input)
+					printf("%ld is divisible by %ld\n", input, num1);
+				else
+				{
+					num2 = input / num1;
+					printf("%ld is divisible by %ld and %ld\n", input, num1, num2);
+				}
+				judge = 0;
 			}
-			
-			
-			
+
 			
 		}
-		if (isPrime)
-			printf("%lld is prime.\n", input);
+
+		if (judge)
+		{
+			printf("%ld is prime\n", input);
+			
+		}
 		printf("Please enter a number:");
-		
 	}
 	printf("Done!\n");
 	return 0;
