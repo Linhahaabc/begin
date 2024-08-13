@@ -1,18 +1,18 @@
-
+#define  _CRT_SECURE_NO_WARNINGS 1
 #include<stdio.h>
 #define a '.'
 int main(void)
 {
 	char ch;
-	int count=0;
-	
-	while ((ch = getchar()) != a)
+	int count = 0;
+
+	while ((ch=getchar())!=a)
 	{
-		if (ch != '" ' &&  ch != '\'')
+		if(ch!='"'&&ch!='\'')
 			count++;
 
 	}
-	printf("There are %d letters.\n",count);
+	printf("%d", count);
 	return 0;
 }
 
