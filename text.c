@@ -1,33 +1,20 @@
 #define  _CRT_SECURE_NO_WARNINGS 1
 #include<stdio.h>
-#include<ctype.h>
-#include<stdbool.h>
-#define STOP '|'
+#define change 1000
 int main(void)
 {
-	char ch;
-	int count=0;
-	long char1 = 0;
-	long words = 0;
-	long line = 0;
-	bool iswords = 0;
-
-	printf("Please enter a article(use \" |\" to stop ):\n");
-	while ((ch = getchar()) != STOP)
+	int quantity,can;
+	
+	
+	printf("Please enter a number as quantities:");
+	while ((scanf("%d", &quantity) )== 1)
 	{
-		char1++;
-		if (ch == '\n')
-			line++;
-		if (!isspace(ch) && !iswords)
-		{
-			words++;
-			iswords = true;
-		}
-		if (isspace(ch) && iswords)
-			iswords = false;
+		can = 0;
+		can = quantity / change;
+		can += (quantity % change == 0) ? 0 : 1;
+		printf("%d should use %d %s.",quantity,can,can==1?"can":"cans");
 
 
 	}
-	printf("character is %ld,words is %ld,lines is %ld.", char1, words, line);
 	return 0;
 }
