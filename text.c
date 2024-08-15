@@ -2,17 +2,19 @@
 #include<stdbool.h>
 #include<ctype.h>
 #include<stdio.h>
+ 
 int main(void)
 {
 	char input;
-	char stop = "|";
+	const char stop = '|';
+	
 	int num = 0;
 	int word = 0;
 	int line = 0;
 	int pun = 0;
 	bool judge = true;
 	printf("Please enter some letter(use | to stop):\n");
-	while ((scanf("%s", &input)) != stop)
+	while ((input=getchar()) != stop)/*无法使用scanf("%c",input)*//*???*/
 	{
 		num++;
 		if (isalnum(input) && judge)
@@ -26,7 +28,7 @@ int main(void)
 			pun++;
 			judge = true;
 		}
-		if (input = '\n')
+		if (input == '\n')
 			line++;
 
 	}
