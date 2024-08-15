@@ -1,35 +1,36 @@
 #define  _CRT_SECURE_NO_WARNINGS 1
+#include<stdbool.h>
+#include<ctype.h>
 #include<stdio.h>
-#define MAX 100.0
-#define MIN 0.0
 int main(void)
 {
-	float min = MIN;
-	float max = MAX;
-	float total = 0.0;
-	float score;
-	int n=0;
-
-	printf("Please enter a number as your score(q to quit):");
-	while ((scanf("%f", &score)) == 1)
+	char input;
+	char stop = "|";
+	int num = 0;
+	int word = 0;
+	int line = 0;
+	int pun = 0;
+	bool judge = true;
+	printf("Please enter some letter(use | to stop):\n");
+	while ((scanf("%s", &input)) != stop)
 	{
-		if (score <= MIN || score >= MAX)
+		num++;
+		if (isalnum(input) && judge)
 		{
-			printf("Your input is invaild\n");
-			printf("Please enter a number as your score(q to quit):");
-			continue;
+			word++;
+			judge = false;
 		}
 
-		n++;
-		total += score;
-		min = (score < max) ? score : max;
-		max = (score > min) ? score : min;
-		printf("Please enter a number as your score(q to quit):");
+		if (!isalnum(input) && !judge)
+		{
+			pun++;
+			judge = true;
+		}
+		if (input = '\n')
+			line++;
 
 	}
-	printf("The max score is %0.2f,min score is %0.2f.\n ", max, min);
-	printf("The total turn is %d,the total score is %0.2f,score per turn is %0.2f\n", n, total, total / n);
+	printf("There are %d letters,%d words,%d punctuations,%d lines.\n", num, word, pun, line);
 	printf("Done!\n");
 	return 0;
-	
 }
